@@ -7,13 +7,13 @@
 // 1, 7 -> такого числа в массиве нет
 // 0, 0 -> 1
 
-int ReadInt(string message)
+int ReadInt(string message)// функция чтения целого числа
 {
     System.Console.Write(message);
     return Convert.ToInt32(Console.ReadLine());
 }
 
-int[,] GenerateArray2D(int rows, int columns, int min, int max)
+int[,] GenerateArray2D(int rows, int columns, int min, int max) // функция создания двумерного массива
 {
     int[,] numbers = new int[rows, columns];
     Random rnd = new Random();
@@ -27,7 +27,7 @@ int[,] GenerateArray2D(int rows, int columns, int min, int max)
     return numbers;
 }
 
-void PrintArray2D(int[,] numbers)
+void PrintArray2D(int[,] numbers) // функция вывода массива на экран
 {
     for (int i = 0; i < numbers.GetLength(0); i++)
     {
@@ -39,7 +39,7 @@ void PrintArray2D(int[,] numbers)
     }
 }
 
-int SearchElement(int[,] array, int indexRows, int indexColumns)
+int SearchElement(int[,] array, int indexRows, int indexColumns) // функция поиска элемента по заданным координатам
 {
     int element = array[0,0];
     for (int i = 0; i < array.GetLength(0); i++)
@@ -64,7 +64,7 @@ int indexRow = ReadInt("Введите индекс строки > ");
 int indexColumn = ReadInt("Введите индекс столбца > ");
 int searchElement = SearchElement(array, indexRow, indexColumn);
 
-if (searchElement == -1) 
+if (searchElement == -1) // условие, если координаты не входят в массив
 {
     Console.WriteLine("В массиве нет числа с таким индексом");
 }

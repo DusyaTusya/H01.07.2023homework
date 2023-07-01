@@ -5,13 +5,13 @@
 // 1 -3,3 8 -9,9
 // 8 7,8 -7,1 9
 
-int ReadInt(string message)
+int ReadInt(string message)// функция чтения целого числа
 {
     System.Console.Write(message);
     return Convert.ToInt32(Console.ReadLine());
 }
 
-double[,] GenerateArray2D(int rows, int columns, int min, int max)
+double[,] GenerateArray2D(int rows, int columns, int min, int max) // функция создания массива
 {
     double[,] numbers = new double[rows, columns];
     Random rnd = new Random();
@@ -25,7 +25,7 @@ double[,] GenerateArray2D(int rows, int columns, int min, int max)
     return numbers;
 }
 
-void PrintArray2D(double[,] numbers)
+void PrintArray2D(double[,] numbers) // функция вывода массива на экран
 {
     for (int i = 0; i < numbers.GetLength(0); i++)
     {
